@@ -134,5 +134,28 @@ void keyReleased() {
     } else {
       row[i].c1 = #CBC5C5;
     }
+    if(key == ENTER){
+      switch(turn){
+      case 0:
+        turn = 1;
+        break;
+      case 1:
+        turn = 2;
+        break;
+      case 2:
+        turn = 3;
+        break;
+      case 3:
+        turn = 4;
+        break;
+       case 4:
+        turn = 5;
+        break;
+       case 5:
+         turn = 0;
+         break;
+      
+      }
+    }
   }
 }
