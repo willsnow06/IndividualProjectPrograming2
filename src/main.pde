@@ -15,10 +15,12 @@ String l5;
 String word;
 String[] lines;
 String letter;
+boolean okay;
 
 
 void setup() {
   size(500, 700);
+  okay = true;
   turn = 0;
   textBox = new TextBox(0, 700, "     ");
   lines = loadStrings("Words.txt");
@@ -134,7 +136,7 @@ void keyReleased() {
     } else {
       row[i].c1 = #CBC5C5;
     }
-    if(key == ENTER){
+    if(key == ENTER && okay){
       switch(turn){
       case 0:
         turn = 1;
@@ -156,6 +158,7 @@ void keyReleased() {
          break;
       
       }
+      okay = false;
     }
   }
 }
